@@ -1,54 +1,62 @@
 <?php
-class FColor {
-	protected $r,$g,$b;	// int Hexadecimal Value
 
-	/**
-	 * Save RGB value into the classes
-	 *
-	 * @param int $r
-	 * @param int $g
-	 * @param int $b
-	 */
-	public function __construct($r,$g,$b){
-		$this->r = $r;
-		$this->g = $g;
-		$this->b = $b;
-	}
+class FColor
+{
+    protected $r;
+    protected $g;
+    protected $b;    // int Hexadecimal Value
 
-	/**
-	 * Returns Red Color
-	 *
-	 * @return int
-	 */
-	public function r(){
-		return $this->r;
-	}
+    /**
+     * Save RGB value into the classes.
+     *
+     * @param int $r
+     * @param int $g
+     * @param int $b
+     */
+    public function __construct($r, $g, $b)
+    {
+        $this->r = $r;
+        $this->g = $g;
+        $this->b = $b;
+    }
 
-	/**
-	 * Returns Green Color
-	 *
-	 * @return int
-	 */
-	public function g(){
-		return $this->g;
-	}
+    /**
+     * Returns Red Color.
+     *
+     * @return int
+     */
+    public function r()
+    {
+        return $this->r;
+    }
 
-	/**
-	 * Returns Blue Color
-	 *
-	 * @return int
-	 */
-	public function b(){
-		return $this->b;
-	}
+    /**
+     * Returns Green Color.
+     *
+     * @return int
+     */
+    public function g()
+    {
+        return $this->g;
+    }
 
-	/**
-	 * Returns the int value for PHP color
-	 *
-	 * @return int
-	 */
-	public function allocate($im) {
-		return imagecolorallocate($im,$this->r,$this->g,$this->b);
-	}
-};
-?>
+    /**
+     * Returns Blue Color.
+     *
+     * @return int
+     */
+    public function b()
+    {
+        return $this->b;
+    }
+
+    /**
+     * Returns the int value for PHP color.
+     *
+     * @return int
+     */
+    public function allocate($im)
+    {
+        return imagecolorallocate($im, $this->r, $this->g, $this->b);
+    }
+}
